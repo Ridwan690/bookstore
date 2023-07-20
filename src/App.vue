@@ -1,19 +1,43 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
-  </div>
-</template>
+  <v-app>
+      <c-header />
 
-<style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+      <c-side-bar />
+
+      <v-content>
+          <v-slide-y-transition mode="out-in">
+              <router-view></router-view>
+          </v-slide-y-transition>
+      </v-content>
+      
+      <c-footer />
+  </v-app>
+  
+</template>
+<script>
+      import CHeader from '@/components/CHeader.vue';
+      import CFooter from '@/components/CFooter.vue';
+      import CSideBar from '@/components/CSideBar.vue';
+
+      
+
+      export default {
+          name: 'App',
+          components: {
+              CHeader,
+              CFooter,
+              CSideBar,
+          },
+      }
+</script>
+<style type="text/css">
+  .v-toolbar {
+      flex: 0 !important;
+  }
+  .v-application .py-3 {
+      text-align: center !important;
+  }
+  .v.card__text {
+      text-align: center !important;
+  }
 </style>
