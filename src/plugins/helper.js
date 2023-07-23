@@ -6,7 +6,8 @@ const Helper = {
     Vue.prototype.appName = process.env.VUE_APP_NAME;
     Vue.prototype.getImage = function (image) {
       if (image != null && image.length > 0) {
-        return process.env.VUE_APP_BACKEND_URL + "/images" + image;
+        // return process.env.VUE_APP_BACKEND_URL + "/image" + image;
+        return "http://bookstore-api.test/image"+ image
       }
       return "/img/notfound.png";
     };
