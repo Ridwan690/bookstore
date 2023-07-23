@@ -4,7 +4,7 @@ import cart from '../store/cart'
 import alert from '../store/alert'
 import dialog from '../store/dialog'
 import auth from '../store/auth'
-// import region from '../store/region'
+import region from '../store/region'
 // import myOrder from './myOrder';
 
 
@@ -48,7 +48,7 @@ export default new Vuex.Store({
     alert,
     dialog,
     auth,
-    // region,
+    region,
     // myOrder,
   }
 })
