@@ -31,7 +31,7 @@
         data() {
             return {
                 valid: true,
-                email: 'ridwann@example.net',
+                email: 'example@example.net',
                 emailRules: [
                 v => !!v || 'E-mail is required',
                 v => /([a-zA-Z0-9_]{1,})(@)([a-zA-Z0-9_]{2,}).([a-zA-Z0-9_]{2,})+/.test(v) || 'E-mail must be valid'
